@@ -1,2 +1,2 @@
-import { a } from './m'
-console.log(a)
+// import { a } from './m'
+console.log('sds')
