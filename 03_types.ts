@@ -13,5 +13,36 @@ e = '233';
 e = 123;
 e = false;
 
-let s: string = '2333'
+let s: string = '2333';
 // s = e 报错
+// 解决unknown赋值给具体变量报错方法
+if (typeof e === 'string') {
+  s = e;
+}
+// 也可以使用断言来解决
+s = e as string;
+// 或者
+s = <string>e;
+
+// 无返回值的函数
+function fn(): void {
+
+};
+
+// 永远不会返回结果 包括undefined和null
+function fn1(): never {
+  throw new Error('2333')
+}
+
+// 对象
+let o1: object;
+// 属性后面添加？表示属性是可选值
+let o2: { name: string, age?: number, [propName: string]: any };
+let o3: { name: string, [propName: string]: any };
+let o4: { [propName: string]: unknown };
+o2 = { name: '233', age: 33, ds: '232', dasd: '23' }
+o4 = { a: 2 }
+
+
+// 定义函数的形参类型和返回值类型
+let fn3: (a: number, b: number) => number

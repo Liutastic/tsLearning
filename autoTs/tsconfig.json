@@ -1,0 +1,28 @@
+{
+  /*
+  ** 表示任意目录
+  * 表示任意文件
+  */
+  // 指定哪些ts文件不需要被编译
+  // "exclude": [
+  //   "./src/**/*"
+  // ],
+  // 指定哪些ts文件需要被编译
+  "include": [
+    "./**/*"
+  ],
+  "compilerOptions": {
+    // 编译成的ECMA版本
+    "target": "ES6",
+    // 模块 模块化规范
+    "module": "system",
+    // lib 指定项目中使用的库
+    // "lib": ["dom"],
+    // 指定编译后的js文件所在目录
+    "outDir": "./dist",
+    // 把代码合并成一个文件 把全局作用域代码合并
+    // "outFile": "./dist/app.js"
+    // 是否编译项目中的js文件
+    "allowJs": false
+  }
+}
